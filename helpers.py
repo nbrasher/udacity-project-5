@@ -16,13 +16,3 @@ def load_map(name):
 	with open(name, 'rb') as f:
 		G = pickle.load(f)
 	return Map(G)
-
-if __name__ == '__main__':
-    with open('map-40.pickle', 'rb') as f:
-	    G = pickle.load(f)
-
-    print(os.getcwd())
-    print(G)
-    nx.get_node_attributes(G, "pos")
-
-    load_map('map-40.pickle')
